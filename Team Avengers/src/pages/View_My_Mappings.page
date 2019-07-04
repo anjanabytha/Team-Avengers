@@ -1,0 +1,12 @@
+<apex:page StandardController="Contact" extensions="MyController" recordSetVar="Contacts">
+<apex:form id="form">
+    <apex:pageMessages />
+        <apex:pageBlock title="My Project Mappings" mode="edit">
+            <apex:pageBlockSection title="Projects" columns="3">
+                <apex:inputField label="Previous Projects" value="{!prac1.Practitioner_Swap__c}" />
+                <apex:inputField label="Current Projects" value="{!prac2.Practitioner_Swap__c}"/>
+                <apex:inputField label="Future Projects" value="{!prac2.Practitioner_Swap__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

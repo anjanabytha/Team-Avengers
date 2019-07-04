@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Practitioner</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Practitioners</value>
+    </caseValues>
+    <fields>
+        <label><!-- Future Project --></label>
+        <lookupFilter>
+            <errorMessage><!-- only new projects can be future projects for practitioner --></errorMessage>
+        </lookupFilter>
+        <name>Future_Project__c</name>
+        <relationshipLabel><!-- Practitioners --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>Level__c</name>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation><!-- Tertiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Previous Projects --></label>
+        <name>Old_Projects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Practitioner End Date on Project --></label>
+        <name>Practitioner_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Practitioner Start Date on Project --></label>
+        <name>Practitioner_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Practitioner Swap --></label>
+        <name>Practitioner_Swap__c</name>
+        <relationshipLabel><!-- Practitioners --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Name 2 --></label>
+        <name>Project_Name_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefits --></label>
+        <name>SM_Benefits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certification Type --></label>
+        <name>SM_Certificationtype__c</name>
+        <picklistValues>
+            <masterLabel>Administrator (ADM 201)</masterLabel>
+            <translation><!-- Administrator (ADM 201) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced Administrator (ADM 301)</masterLabel>
+            <translation><!-- Advanced Administrator (ADM 301) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEV 401  - Developer</masterLabel>
+            <translation><!-- DEV 401  - Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEV 501 – Advanced Developer</masterLabel>
+            <translation><!-- DEV 501 – Advanced Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Cloud Consultant</masterLabel>
+            <translation><!-- Sales Cloud Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Cloud Consultant</masterLabel>
+            <translation><!-- Service Cloud Consultant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hiring --></label>
+        <name>SM_Hiring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leave --></label>
+        <name>SM_Leave__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salary --></label>
+        <name>SM_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- autonumber --></label>
+        <name>autonumber__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Practitioner End Date cannot be greater than Project End Date --></errorMessage>
+        <name>Prac_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Practitoner Start Date cannot be less than Project Start Date --></errorMessage>
+        <name>Prac_Start_Date</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- My_Projects --></label>
+        <name>My_Projects</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Swap_Practitioners --></label>
+        <name>Swap_Practitioners</name>
+    </webLinks>
+</CustomObjectTranslation>

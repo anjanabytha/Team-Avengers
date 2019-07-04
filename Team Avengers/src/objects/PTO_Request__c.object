@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Approval_status__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FInal rejection</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_PTO_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last PTO End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PTO_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>PTO End Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PTO_start_date__c</fullName>
+        <externalId>false</externalId>
+        <label>PTO start date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>(PTO_End_Date__c  -  PTO_start_date__c)+1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>PTO Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>avengers deloitte</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>PTO Reason</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>PTO Requests</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approval_status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PTO_start_date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PTO_End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_duration__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>PTO_end_date</fullName>
+        <active>true</active>
+        <errorConditionFormula>PTO_End_Date__c  &lt;=  TODAY()</errorConditionFormula>
+        <errorDisplayField>PTO_End_Date__c</errorDisplayField>
+        <errorMessage>Enter valid PTO end date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PTO_start_date</fullName>
+        <active>true</active>
+        <errorConditionFormula>PTO_start_date__c  &lt;=  TODAY()</errorConditionFormula>
+        <errorDisplayField>PTO_start_date__c</errorDisplayField>
+        <errorMessage>Enter valid PTO start date</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PTO Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PTO Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval status --></label>
+        <name>Approval_status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FInal rejection</masterLabel>
+            <translation><!-- FInal rejection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last PTO End Date --></label>
+        <name>Last_PTO_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PTO End Date --></label>
+        <name>PTO_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PTO start date --></label>
+        <name>PTO_start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total duration --></label>
+        <name>Total_duration__c</name>
+    </fields>
+    <layouts>
+        <layout>PTO Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Enter valid PTO end date --></errorMessage>
+        <name>PTO_end_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter valid PTO start date --></errorMessage>
+        <name>PTO_start_date</name>
+    </validationRules>
+</CustomObjectTranslation>
